@@ -1,28 +1,23 @@
-import './App.css';
-import Button from './button.jsx';
-import Card from './card.jsx';
+import Input from './components/Input/Input';
 
-export default function App() {
+function App() {
   return (
     <div>
-      <Button>FIND OUT MORE</Button>
-      <div className="app">
-        <Card
-          title="– ROBO –"
-          price="15.000 ₽"
-          description="УМК по робототехнике"
-          buttonText="Оставить заявку"
-        />
-        <Card
-          title="– ROBO –"
-          price="10.000 ₽"
-          description="УМК по программированию"
-          buttonText="Оставить заявку"
-        />
-      </div>
+      <h2>INPUTS</h2>
+      <Input title="Title" placeholder="Placeholder" />
+      
+      <h2>FOCUS</h2>
+      <Input title="Title" value="Text" />
+      
+      <h2>ACTIVE</h2>
+      <Input title="Title" value="Text" />
+      
+      <h2>DISABLED</h2>
+      <Input title="Title" value="Text" disabled={true} />
+      
+      <h2>ERROR</h2>
+      <Input title="Title" value="Text" error={true} errorText="Error text" />
     </div>
-
   );
 }
-
-
+export default App;
